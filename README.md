@@ -2,10 +2,10 @@
 
 Implementation of A* algorithm on a 2D grid map. The map in question can create two forms of maps: 
 * Maze like map   
-  ![](https://github.com/SShivamshan/A-star-algorithm/blob/main/test/Screenshot%20from%202023-05-21%2021-15-14.png "Maze grid")
-* A map containing random obstacles 
-  ![](https://github.com/SShivamshan/A-star-algorithm/blob/main/test/Screenshot%20from%202023-05-21%2021-15-14.png "Maze grid")
-The grid maps consists of 0 and 1 with ones defining an obstacle and zeros the lane. 
+  ![](https://github.com/SShivamshan/A-star-algorithm/blob/main/test/Screenshot%20from%202023-05-21%2021-15-14.png "Maze grid")  
+* A map containing random obstacles   
+  ![](https://github.com/SShivamshan/A-star-algorithm/blob/main/test/Screenshot%20from%202023-05-21%2021-28-26.png "Random obstacle grid")  
+The grid maps consists of 0 and 1 with ones defining an obstacle and zeros the lane. The start and end position are shown by the S and E.  
 
 ## Path planning algorithms
 The size of the map can de defined by user through the command line as well. 
@@ -21,8 +21,10 @@ To excute the program, there are two possible ways :
 * without any arguments : this will create by default a 25x25 of a maze type grid
  `./main.exe` 
  * with arguments sent through the command line : the third argument is to define if the user wants to have any obstacles and the fourth argument is to define the map type: **maze** for a maze type grid and **random** for randomly generated obstacles inside a grid map.  
- `./main.exe 15 15 yes maze` or `./main.exe 15 15 yes random`
+ `./main.exe 15 15 yes maze` or `./main.exe 15 15 yes random`  
  
+![](https://github.com/SShivamshan/A-star-algorithm/blob/main/test/Screenshot%20from%202023-05-21%2021-14-52.png "Result")
+
 Used valgrind to find any memory leaks. We though that i don't have any memory leaks at the end of the program with the given path, I do get some errors occasionally (invalid read) that i don't seem to understand why is it occuring at some times, which needs further invesigation(any remarks or correction is welcome).
 
 ## Further improvements
