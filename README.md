@@ -21,11 +21,17 @@ To excute the program, there are two possible ways :
 * without any arguments : this will create by default a 25x25 of a maze type grid
  `./main.exe` 
  * with arguments sent through the command line : the third argument is to define if the user wants to have any obstacles and the fourth argument is to define the map type: **maze** for a maze type grid and **random** for randomly generated obstacles inside a grid map.  
- `./main.exe 15 15 yes maze` or `./main.exe 15 15 yes random`  
+ `./main.exe 15 15 yes maze` or `./main.exe 15 15 yes random`
+ The follwing images were compiled and debugged through valgrind.  
+ The following is the result that i got for the maze type grid using the **A***:  
  
-![](https://github.com/SShivamshan/A-star-algorithm/blob/main/test/Screenshot%20from%202023-05-21%2021-14-52.png "Result")
+![](https://github.com/SShivamshan/A-star-algorithm/blob/main/test/Screenshot%20from%202023-05-21%2021-14-52.png "Result A*")  
+ The following is the result that i got for the randomly generated obstacles type grid using the **Greedy Best-First Search**:  
+ ![](https://github.com/SShivamshan/A-star-algorithm/blob/main/test/Screenshot%20from%202023-05-21%2021-34-58.png "Result GBFS")  
+ The following is the result that i got for the randomly generated obstacles type grid using the **Dijkstra**:  
+ ![](https://github.com/SShivamshan/A-star-algorithm/blob/main/test/Screenshot%20from%202023-05-21%2021-36-17.png "Result Dijkstra") 
 
-Used valgrind to find any memory leaks. We though that i don't have any memory leaks at the end of the program with the given path, I do get some errors occasionally (invalid read) that i don't seem to understand why is it occuring at some times, which needs further invesigation(any remarks or correction is welcome).
+**Used valgrind to find any memory leaks. As we can see on the third image that even though that i don't have any memory leaks at the end of the program and path from the goal to end also appears, I do get some errors occasionally (invalid read) that i don't seem to understand why is it occuring at some times, which needs further invesigation(any remarks or correction is welcome).**
 
 ## Further improvements
 * Use of smart pointers(shared_ptr) instead of raw pointers(with the raw pointers, memory are always freed at the end of the program)
