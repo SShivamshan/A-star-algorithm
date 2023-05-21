@@ -2,6 +2,7 @@
 
 Implementation of A* algorithm on a 2D grid map. The map in question can create two forms of maps: 
 * Maze like map 
+  
 * A map containing random obstacles 
 
 The grid maps consists of 0 and 1 with ones defining an obstacle and zeros the lane. 
@@ -15,8 +16,8 @@ Diagonal distance :
 The diagonal distance is given by : cost * (dx+dy) + min(dx,dy) * (diag_cost - 2*cost), cost corresponds to moving straight and diag_cost for moving diagonally. These coefficients can be modified. If these coeffcient are equal then they are called the : Chebyshev distance.
 
 ## Compiling and debugging 
-To compile the program :`g++ -ansi -Wall -pedantic -g -std=c++11 main.cpp Map_creator.hpp Map_creator.cpp network.cpp network.hpp -o main.exe`
-To excute the program, there are two possible ways : 
+To compile the program :`g++ -ansi -Wall -pedantic -g -std=c++11 main.cpp Map_creator.hpp Map_creator.cpp network.cpp network.hpp -o main.exe`  
+To excute the program, there are two possible ways :   
 * without any arguments : this will create by default a 25x25 of a maze type grid
  `./main.exe` 
  * with arguments sent through the command line : the third argument is to define if the user wants to have any obstacles and the fourth argument is to define the map type: **maze** for a maze type grid and **random** for randomly generated obstacles inside a grid map.  
