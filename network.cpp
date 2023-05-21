@@ -207,7 +207,7 @@ int Network::heuristic(int a,int b){
     int h_straight = std::abs(a - _end->x) + std::abs(b - _end->y);
     double diag_cost = 1; // moving diagonally 
     double cost = 1; // moving straight cost 
-    return (int)diag_cost * h_diagonal + cost * (h_straight - 2*h_diagonal);
+    return (int)cost * (h_diagonal+h_straight) + std::min(h_diagonal,h_straight) * (diag_cost - 2*cost);
 }
 /**
  * @brief Calculate the distance from start node to current node
