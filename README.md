@@ -14,6 +14,7 @@ The most important factor about A* is the heuristic cost : it's 0 : f(n) = g(n) 
 
 Diagonal distance :         
 The diagonal distance is given by : cost * (dx+dy) + min(dx,dy) * (diag_cost - 2*cost), cost corresponds to moving straight and diag_cost for moving diagonally. These coefficients can be modified. If these coeffcient are equal then they are called the : Chebyshev distance.
+Another function is also present inside the program which calculates the 
 
 ## Compiling and debugging 
 To compile the program :`g++ -ansi -Wall -pedantic -g -std=c++11 main.cpp Map_creator.hpp Map_creator.cpp network.cpp network.hpp -o main.exe`  
