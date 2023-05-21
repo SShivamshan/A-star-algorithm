@@ -1,10 +1,10 @@
 # A-star-algorithm 
 
 Implementation of A* algorithm on a 2D grid map. The map in question can create two forms of maps: 
-* Maze like map 
-  
+* Maze like map   
+  ![](https://github.com/SShivamshan/A-star-algorithm/blob/main/test/Screenshot%20from%202023-05-21%2021-15-14.png "Maze grid")
 * A map containing random obstacles 
-
+  ![](https://github.com/SShivamshan/A-star-algorithm/blob/main/test/Screenshot%20from%202023-05-21%2021-15-14.png "Maze grid")
 The grid maps consists of 0 and 1 with ones defining an obstacle and zeros the lane. 
 
 ## Path planning algorithms
