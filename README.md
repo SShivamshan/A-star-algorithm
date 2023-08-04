@@ -38,7 +38,7 @@ To excute the program, there are two possible ways :
 * Use of smart pointers(shared_ptr) instead of raw pointers(with the raw pointers, memory are always freed at the end of the program)
 * Improvement of the grid map especially for the maze. 
 * To use different type of distance(euclidean distance) to view how the path planning works
-* Implement a duration calculation of cpu time use for each path planning algorithm(currently gives 0 or 1 microseconds when used with ./main)
+* Implement a duration calculation of cpu time use for each path planning algorithm(currently gives 0 or 1 microseconds when used with ./main) better than the one the implemented
 
 
 
