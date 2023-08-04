@@ -52,7 +52,7 @@ class Network: public Map_creator{
         void set_cost();
         int heuristic(int a,int b);                                             // calculate the heuristic distance using the diagonal distance 
         int g_cost(int a,int b);                                                // calculate the distance from the start node to node x 
-        int d(Node *current,Node *neighbor);                                    // calculate the distance from the current node to it's neighbor node 
+        int distance(Node *current,Node *neighbor);                             // calculate the distance from the current node to it's neighbor node 
         std::vector<std::pair<int,int>> reverse_path();                         // to reverse the path starting from the end node to start node 
 
         Node *node = new Node[this->get_length()*this->get_height()];           // create the number of nodes throught the length and height variables given by the Map_creator class 

@@ -210,20 +210,13 @@ int Network::heuristic(int a,int b){
     return (int)cost * (h_diagonal+h_straight) + std::min(h_diagonal,h_straight) * (diag_cost - 2*cost);
 }
 /**
- * @brief Calculate the distance from start node to current node
+ * @brief Calculate distance between from the start node to the neighbor node
  * 
  * @param a 
  * @param b 
  * @return ** int 
  */
 int Network::g_cost(int a,int b){
-    // double dx = std::abs(_start->x - a) ;
-    // double dy = std::abs(_start->y - b);
-// 
-    // if(dx > dy){
-        // return 2*dy + 1*(dx - dy);
-    // }
-    // return 2*dx + 1*(dy - dx);
     double dx = std::abs(_start->x - a);
     double dy = std::abs(_start->y - b);
 
@@ -237,7 +230,7 @@ int Network::g_cost(int a,int b){
  * @param neighbor 
  * @return ** int 
  */
-int Network::d(Node *current,Node *neighbor){
+int Network::distance(Node *current,Node *neighbor){
     double dx = std::abs(current->x - neighbor->x);
     double dy = std::abs(current->y - neighbor->y);
 
@@ -325,7 +318,7 @@ std::vector<std::pair<int,int>> Network::A_star(Node *_start,Node *_end){
                 if(neighbor->obstacle == true || neighbor->visited == true){
                     continue;
                 }
-                int temp_gscore = current->g + d(current,neighbor); // calculate the distance from start to neighbor going through the current node 
+                int temp_gscore = current->g + distance(current,neighbor); // calculate the distance from start to neighbor going through the current node 
                 if (temp_gscore < neighbor->g){
                     neighbor->g = temp_gscore;
                     neighbor->f = temp_gscore + heuristic(neighbor->x,neighbor->y);
@@ -396,7 +389,7 @@ std::vector<std::pair<int,int>> Network::Dijkstra(Node *_start,Node *_end){
             current->visited = true;
             
             path = this->reverse_path();
-            std::cout << "End found " << std::endl;
+            // std::cout << "End found " << std::endl;
             // break;
             return path;
         }else{
